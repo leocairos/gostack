@@ -31,5 +31,6 @@
   "emmet.includeLanguages": {
       "javascript": "javascriptreact"
   },
-  "git.enableSmartCommit": true
+  "git.enableSmartCommit": true,
+  "terminal.integrated.shell.osx": "/bin/zsh"
 }
