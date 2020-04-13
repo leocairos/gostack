@@ -57,7 +57,22 @@ Configurar script no package.json
 
 ```
 
-## Padronizar editor de projetos
+## Padronizar projeto
 
+```
 * Instalar plugin "EditorConfig for VS Code"
 * Botão direito na pasta do projeto e escolher "Generate .editorconfig"
+
+$ yarn add eslint -D
+
+$ yarn eslint --init
+    ? How would you like to use ESLint? **To check syntax, find problems, and enforce code style**
+    ? What type of modules does your project use? **JavaScript modules (import/export)**
+    ? Which framework does your project use? **None of these**
+    ? Does your project use TypeScript? **Yes**
+    ? Where does your code run? **Node**
+    ? How would you like to define a style for your project? **Use a popular style guide**
+    ? Which style guide do you want to follow? **Airbnb: https://github.com/airbnb/javascript**
+    ? What format do you want your config file to be in? **JSON**
+    ? Would you like to install them now with npm? **No**
+```
