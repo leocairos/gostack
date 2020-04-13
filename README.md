@@ -27,12 +27,11 @@ A new tool that blends your everyday work apps into one. It's the all-in-one wor
     * Material icon Theme
     * Jira Code Font
 
-
+```
 const path = require('path')
-
 path.resolve(__dirname, 'src', 'index.js')
-
 use o path ao inves de ./src/index.js devivo as diferenças entre SOs
+```
 
 ## Criar projeto NodeJs com TypeScript
 
