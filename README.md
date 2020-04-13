@@ -29,3 +29,32 @@ A new tool that blends your everyday work apps into one. It's the all-in-one wor
 const path = require('path')
 path.resolve(__dirname, 'src', 'index.js')
 use o path ao inves de ./src/index.js devivo as diferenças entre SOs
+
+## Criar projeto NodeJs com TypeScript
+
+```
+$ mkdir pasta-projeto
+$ cd pasta-projeto
+$ yarn init -y
+$ yarn add express
+$ yarn add @types/express -D
+$ yarn add typescript -D
+$ yarn add ts-node-dev -D
+$ yarn tsc --init 
+
+Configurar tsconfig.json
+    "outDir": "./dist",
+    "rootDir": "./src",
+
+Configurar script no package.json
+    "scripts": {
+        "build": "tsc",
+        "dev:server":"ts-node-dev --transpileOnly --ignore-watch node-modules src/server.ts"
+    },
+
+```
+
+## Padronizar editor de projetos
+
+>> Instalar plugin "EditorConfig for VS Code"
+>> Botão direito na pasta do projeto e escolher "Generate .editorconfig"
