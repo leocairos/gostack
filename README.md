@@ -66,7 +66,7 @@ Configurar script no package.json
 $ yarn add eslint -D
 
 $ yarn eslint --init
-    ? How would you like to use ESLint? **To check syntax, find problems, and enforce code style**
+    ? How would you like to use ESLint? __To check syntax, find problems, and enforce code style__
     ? What type of modules does your project use? **JavaScript modules (import/export)**
     ? Which framework does your project use? **None of these**
     ? Does your project use TypeScript? **Yes**
