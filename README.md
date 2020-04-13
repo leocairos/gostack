@@ -56,5 +56,5 @@ Configurar script no package.json
 
 ## Padronizar editor de projetos
 
->> Instalar plugin "EditorConfig for VS Code"
->> Botão direito na pasta do projeto e escolher "Generate .editorconfig"
+* Instalar plugin "EditorConfig for VS Code"
+* Botão direito na pasta do projeto e escolher "Generate .editorconfig"
