@@ -40,9 +40,7 @@ $ mkdir pasta-projeto
 $ cd pasta-projeto
 $ yarn init -y
 $ yarn add express
-$ yarn add @types/express -D
-$ yarn add typescript -D
-$ yarn add ts-node-dev -D
+$ yarn add -D @types/express typescript ts-node-dev eslint-import-resolver-typescript
 $ yarn tsc --init 
 
 Configurar tsconfig.json
@@ -54,6 +52,22 @@ Configurar script no package.json
         "build": "tsc",
         "dev:server":"ts-node-dev --transpileOnly --ignore-watch node-modules src/server.ts"
     },
+
+Configurar .eslintrc.json
+    "rules": {
+        "import/extensions": [
+        "error",
+        "ignorePackages",
+        {
+            "ts": "never"
+        }
+        ]
+    },
+    "settings": {
+        "import/resolver": {
+        "typescript": {}
+        }
+    }
 
 ```
 
@@ -102,4 +116,75 @@ $ yarn add -D @typescript-eslint/eslint-plugin@latest eslint-config-airbnb-base@
             "source.fixAll.eslint": true,
         }
     },
+```
+
+### Prettier
+
+$ yarn add -D prettier eslint-config-prettier eslint-plugin-prettier
+
+Configurar .eslintrc.json
+    ...
+    "extends": [
+        "airbnb-base",
+        "plugin:@typescript-eslint/recommended",
+        "prettier/@typescript-eslint",
+        "plugin:@prettier/recommended"
+    ],
+    ...
+    "plugins": [
+        "@typescript-eslint",
+        "prettier"
+    ],
+    ...
+    "rules": {
+        "prettier/prettier": "error",
+        "import/extensions": [
+            "error",
+            "ignorePackages",
+            {
+                "ts": "never"
+            }
+        ]
+    },
+
+Criar prettier.config.js
+	module.exports = {
+		singleQuote: true,
+		trailingComma: "all",
+		arrowParens: "avoid",
+	};
+	
+
+### Debug
+
+* Na guia lateral Run (bug) clicar em "create a launch.json file
+
+```
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "attach",
+      "protocol": "inspector",
+      "restart": true,
+      "name": "Debug",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "outFiles": [
+        "${workspaceFolder}/**/*.js"
+      ]
+    }
+  ]
+}
+```
+
+* Atualizar package.json
+
+```
+"dev:server": "ts-node-dev --inspect --transpileOnly --ignore-watch node-modules src/server.ts"
 ```
