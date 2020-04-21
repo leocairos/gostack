@@ -1,22 +1,7 @@
-# GoStack BootCamp
+# Projeto NodeJS
 
-**Treinamento imersivo** nas tecnologias mais modernas de desenvolvimento web e mobile.
+Primeiro projeto NodeJS com TypeScript, ESLint e Prettier
 
-## Anotações
-
-```
-* https://dribbble.com/
-Dribbble is the leading destination to find & showcase creative work and home to the world's best design professionals.
-
-* www.pinterest.ca
-Discover recipes, home ideas, style inspiration and other ideas to try.
- 
-* www.figma.com
-Build better products as a team. Design, prototype, and gather feedback all in one place with
- 
-* www.notion.so
-A new tool that blends your everyday work apps into one. It's the all-in-one workspace for you and your team.
-```
 
 ## Ambiente de desenvolvimento
 
@@ -41,7 +26,7 @@ $ cd pasta-projeto
 $ yarn init -y
 $ yarn add express
 $ yarn add -D @types/express typescript ts-node-dev eslint-import-resolver-typescript
-$ yarn tsc --init 
+$ yarn tsc --init
 
 Configurar tsconfig.json
     "outDir": "./dist",
@@ -153,7 +138,7 @@ Criar prettier.config.js
 		trailingComma: "all",
 		arrowParens: "avoid",
 	};
-	
+
 
 ### Debug
 
@@ -188,3 +173,28 @@ Criar prettier.config.js
 ```
 "dev:server": "ts-node-dev --inspect --transpileOnly --ignore-watch node-modules src/server.ts"
 ```
+
+### Lembretes
+
+* Migration
+  * yarn typeorm migration:create -n CreateAppointments
+  * yarn typeorm migration:run
+  * yarn typeorm migration:revert
+
+### Conceitos
+
+* SoC - Separation of Concerns
+* DTO - Data Transfer Object
+* SOLID
+  * Single Responsability Principle
+  * O
+  * L
+  * I
+  * Dependecy Inversion Principle
+* DRY - Don't Repeat Yourself
+* KISS - Keep It Simple & Stupid
+
+### Links
+
+* http://www.md5.cz/ - Online generator md5 hash of a string
+* https://jwt.io/ - JWT.IO allows you to decode, verify and generate JWT.
